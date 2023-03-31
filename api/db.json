@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "victor2@hotmail.com",
+      "description": "igor bixcoito",
+      "id": 1
+    },
+    {
+      "email": "teste@email.com",
+      "description": "teste",
+      "id": 2
+    }
+  ]
+}
