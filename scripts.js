@@ -72,7 +72,7 @@ async function deleteUser(id) {
 }
 
 // chamado sempre que clicar no botao "editar"
-async function batataEdicao(id) {
+async function handleUpdateUser(id) {
   const usuarioAtual = await getUserById(id)
 
   const emailElement = document.querySelector('input#exampleFormControlInput1')
@@ -92,7 +92,7 @@ function imprimirUsuarios(usuarios) {
         ${usuario.email} - ${usuario.description}
         <div>
           <button class="btn btn-danger" onclick="deleteUser(${usuario.id})">excluir</button>
-          <button class="btn btn-warning" onclick="batataEdicao(${usuario.id})">editar</button>
+          <button class="btn btn-warning" onclick="handleUpdateUser(${usuario.id})">editar</button>
         </div>
       </li>
     `
