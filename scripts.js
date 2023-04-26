@@ -1,7 +1,7 @@
 const button = document.querySelector('button#btn-salvar')
 const userListContainer = document.querySelector('.list-group')
 
-const apiUrl = 'https://modalexample2.onrender.com'
+const apiUrl = 'https://modalexample2back.onrender.com'
 
 // Id que está sendo atualizado
 let idAtual = null
