@@ -1,6 +1,8 @@
 const button = document.querySelector('button#btn-salvar')
 const userListContainer = document.querySelector('.list-group')
 
+const apiUrl = 'https://modalexample2.onrender.com'
+
 // Id que está sendo atualizado
 let idAtual = null
 
@@ -22,7 +24,7 @@ button.addEventListener('click', async (batata) => {
 })
 
 async function createUser(user) {
-  await fetch('http://localhost:3000/users', {
+  await fetch(apiUrl + '/users', {
     method: 'POST',
     body: JSON.stringify(user),
     headers: {
@@ -35,7 +37,7 @@ async function createUser(user) {
 }
 
 async function updateUser(id, user) {
-  await fetch('http://localhost:3000/users/' + id, {
+  await fetch(apiUrl + '/users/' + id, {
     method: 'PUT',
     body: JSON.stringify(user),
     headers: {
@@ -48,25 +50,25 @@ async function updateUser(id, user) {
 }
 
 async function getAllUsers() {
-  const response = await fetch('http://localhost:3000/users');
+  const response = await fetch(apiUrl + '/users');
   const users = await response.json();
 
   imprimirUsuarios(users)
 }
 
 async function getUserById(id) {
-  const response = await fetch('http://localhost:3000/users/' + id);
+  const response = await fetch(apiUrl + '/users/' + id);
   return response.json();
 }
 
 async function deleteUser(id) {
-  await fetch('http://localhost:3000/users/' + id, {
+  await fetch(apiUrl + '/users/' + id, {
     method: 'DELETE',
   })
 }
 
 async function deleteUser(id) {
-  await fetch('http://localhost:3000/users/' + id, {
+  await fetch(apiUrl + '/users/' + id, {
     method: 'DELETE',
   })
 }
