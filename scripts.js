@@ -21,6 +21,8 @@ button.addEventListener('click', async (batata) => {
   } else {
     await createUser(data)
   }
+  
+  location.reload(true)
 })
 
 async function createUser(user) {
@@ -64,13 +66,8 @@ async function getUserById(id) {
 async function deleteUser(id) {
   await fetch(apiUrl + '/users/' + id, {
     method: 'DELETE',
-  })
-}
-
-async function deleteUser(id) {
-  await fetch(apiUrl + '/users/' + id, {
-    method: 'DELETE',
-  })
+  })  
+  location.reload(true)
 }
 
 // chamado sempre que clicar no botao "editar"
